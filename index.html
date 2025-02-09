@@ -52,6 +52,10 @@
             font-size: 16px;
             width: 100%;
             box-sizing: border-box;
+            /* Added for better mobile input */
+            -webkit-appearance: none;
+            appearance: none;
+            type: number;
         }
 
         .guessField:focus {
@@ -69,6 +73,8 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
             width: 100%;
+            /* Added for better mobile touch */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .guessSubmit:hover {
@@ -145,9 +151,11 @@
             Enter a guess:
         </label>
 
-        <input type="text" 
+        <input type="number" 
                id="guessField" 
-               class="guessField">
+               class="guessField"
+               inputmode="numeric"
+               pattern="[0-9]*">
 
         <input type="submit" 
                value="Submit guess" 
