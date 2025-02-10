@@ -11,7 +11,7 @@
             max-width: 800px;
             min-width: 480px;
             margin: 0 auto;
-            background-color: #f0f2f5;
+            background-color: #8c64e9;
             padding: 20px;
         }
 
@@ -58,11 +58,11 @@
 
         .guessField:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #6e34db;
         }
 
         .guessSubmit {
-            background-color: #3498db;
+            background-color: #6e34db;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -75,7 +75,7 @@
         }
 
         .guessSubmit:hover {
-            background-color: #2980b9;
+            background-color: #8458d6;
         }
 
         /* Mobile Responsive Styles */
@@ -136,11 +136,10 @@
 </head>
 <body>
     <div class="container">
-    <h1> Sarcastic Guessing game</h1>
+    <h1>Guessing game</h1>
     <p>
-        I have selected a random number
-        between 1 - 100. See if you can
-        guess it(or dont i guess...)
+        I have selected a number 1-100 
+        See if you can guess it correctly
     </p>
 
     <div class="form">
@@ -148,7 +147,7 @@
             Enter a guess:
         </label>
 
-        <input type="text" 
+        <input type="number" 
                id="guessField" 
                class="guessField"
                inputmode="numeric"
@@ -177,20 +176,20 @@
             let x = document.getElementById("guessField").value;
                 
                 if(!x|| isNaN(x)){
-                    alert("Sure it's not like the title says that a random number has been selected... its okay you will get it eventually (hint: try a number this time)")
+                    alert("Hey developer here. Try a number this time :)")
                 }
 
                 else{
 
             if (x == y) {
-                alert("Hooray i guess...like you guessed a number and it was correct.")
+                alert("HOLY MOLY YOU GOT IT!!")
 
             }else if(x > y){
                 guess++;
-                alert("Ahaha, Guess lower dude.")
+                alert("Try guessing abit lower.")
             } else{
                 guess++;
-                alert("Sucks to suck try guess higher")
+                alert("Try guess abit higher")
             }
         }
     }
